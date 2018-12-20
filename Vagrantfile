@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
                     "/opt/data/gitea:/opt/data/gitea"
                   ]
       d.vagrant_vagrantfile = "#{HOST_VAGRANTFILE}"
-      d.remains_running = false
+      #d.remains_running = false
     end
   end
 
