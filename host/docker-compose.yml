@@ -6,7 +6,7 @@ services:
     image: postgres:9.6
 
     ports:
-      - 5432:5432
+      - "5432:5432"
 
     environment:
       - POSTGRES_USER=gitea
@@ -24,8 +24,8 @@ services:
     image: nginx
 
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
 
     volumes:
       - /var/www:/var/www
@@ -34,6 +34,9 @@ services:
     networks:
       - internal
       - host_out
+      
+    depends_on:
+      - gitea
 
   gitea:
     image: gitea/gitea:latest
@@ -56,11 +59,8 @@ services:
 
     depends_on:
       - postgres
-      - nginx
 
 networks:
-  host_out:
-    external: true
-    name: host
+  host_out:         
   internal:
-    external: false
+    

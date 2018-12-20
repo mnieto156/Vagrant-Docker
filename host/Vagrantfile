@@ -40,6 +40,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../data/www", "/var/www"
   config.vm.synced_folder "../data/nginx", "/opt/data/nginx"
   config.vm.synced_folder "../data/sql", "/opt/data/sql", type: "rsync"
+  config.vm.synced_folder "../data/git", "/opt/data/gitea"
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = 'ubuntu-docker-vm'
@@ -63,7 +64,7 @@ Vagrant.configure("2") do |config|
     compose_version: "1.23.1",
     yml: ["/vagrant/docker-compose.yml"],
     rebuild: true, 
-    project_name: "myproject",
+    project_name: "UnedPLtest",
     run: "always"
 
 end
