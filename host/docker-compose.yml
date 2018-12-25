@@ -1,0 +1,98 @@
+version: "3"
+
+services:
+
+  postgres:
+    image: postgres:9.6
+
+    container_name: postgres
+
+    ports:
+      - "5432:5432"
+
+    environment:
+      - POSTGRES_USER=gitea
+      - POSTGRES_PASSWORD=gitea
+      - POSTGRES_DB=gitea
+
+    networks:
+      - internal
+      - host_out
+
+    volumes:
+      - /opt/data/sql:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:stable-alpine
+
+    container_name: nginx
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - /var/www:/var/www
+      - /opt/data/nginx:/etc/nginx
+
+    networks:
+      - internal
+      - host_out
+      
+    depends_on:
+      - gitea
+      - jenkins
+
+  gitea:
+    image: gitea/gitea:latest
+
+    container_name: gitea
+
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    
+    restart: always
+
+    networks:
+      - internal
+
+    volumes:
+      - /opt/data/gitea:/data
+
+    ports:
+      - "3000"
+      - "22022:22"
+
+    depends_on:
+      - postgres
+
+  jenkins:
+    image: jenkins/jenkins:lts-alpine
+
+    container_name: jenkins
+
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+
+    ports:
+      - "50000"
+
+    networks:
+      - internal
+
+    volumes:
+      - jenkins_data:/var/jenkins_home
+
+    restart: always
+
+    depends_on:
+      - gitea
+
+volumes:
+  jenkins_data:
+
+networks:
+  host_out:         
+  internal:
+    
