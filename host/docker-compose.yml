@@ -23,7 +23,7 @@ services:
       - /opt/data/sql:/var/lib/postgresql/data
 
   nginx:
-    image: nginx
+    image: nginx:stable-alpine
 
     container_name: nginx
 
@@ -41,6 +41,7 @@ services:
       
     depends_on:
       - gitea
+      - jenkins
 
   gitea:
     image: gitea/gitea:latest
@@ -61,10 +62,35 @@ services:
 
     ports:
       - "3000"
-      - "22"
+      - "22022:22"
 
     depends_on:
       - postgres
+
+  jenkins:
+    image: jenkins/jenkins:lts-alpine
+
+    container_name: jenkins
+
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+
+    ports:
+      - "50000"
+
+    networks:
+      - internal
+
+    volumes:
+      - jenkins_data:/var/jenkins_home
+
+    restart: always
+
+    depends_on:
+      - gitea
+
+volumes:
+  jenkins_data:
 
 networks:
   host_out:         
