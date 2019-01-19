@@ -45,6 +45,8 @@ services:
       - gitea
       - jenkins
 
+    restart: always
+
   gitea:
     image: gitea/gitea:latest
 
@@ -70,7 +72,7 @@ services:
       - postgres
 
   jenkins:
-    image: jenkins/jenkins:lts-alpine
+    image: jenkins/jenkins:lts-slim
 
     container_name: jenkins
 
