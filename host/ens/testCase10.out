@@ -15,7 +15,7 @@ Se inicializar n los registros antes de ejecutar
 Ensamblando fichero ens/testCase10.ens
 L¡neas procesadas: 108
 Fichero ens/testCase10.ens ensamblado correctamente
-ENS2001>CONTROL FLUJO REPEAT
+ENS2001>CONTROL FLUJO ERROR
 x(012345):012345
 Fin del programa. Instrucci¢n HALT
 ENS2001>¨Seguro que desea salir (S/N)? 
