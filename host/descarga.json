@@ -1,0 +1,550 @@
+[
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/13/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/13/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/13/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "ant_build",
+    "durationInMillis" : 6245,
+    "id" : "13",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:31.329+0000",
+    "state" : "FINISHED",
+    "type" : "STAGE",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "27",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : null,
+    "restartable" : true
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/27/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/27/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/27/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "ant_test",
+    "durationInMillis" : 7978,
+    "id" : "27",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:37.669+0000",
+    "state" : "FINISHED",
+    "type" : "STAGE",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "46",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "47",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "48",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "49",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "50",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "51",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "52",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "53",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "54",
+        "type" : "PARALLEL"
+      },
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "55",
+        "type" : "PARALLEL"
+      }
+    ],
+    "firstParent" : "13",
+    "restartable" : true
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/46/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/46/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/46/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase01.p",
+    "durationInMillis" : 7623,
+    "id" : "46",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.024+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/47/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/47/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/47/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase02.p",
+    "durationInMillis" : 7604,
+    "id" : "47",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.043+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/48/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/48/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/48/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase03.p",
+    "durationInMillis" : 7594,
+    "id" : "48",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.053+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/49/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/49/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/49/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase04.p",
+    "durationInMillis" : 7584,
+    "id" : "49",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.063+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/50/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/50/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/50/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase05.p",
+    "durationInMillis" : 7573,
+    "id" : "50",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.074+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/51/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/51/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/51/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase06.p",
+    "durationInMillis" : 7563,
+    "id" : "51",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.084+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/52/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/52/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/52/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase07.p",
+    "durationInMillis" : 7553,
+    "id" : "52",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.094+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/53/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/53/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/53/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase08.p",
+    "durationInMillis" : 7544,
+    "id" : "53",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.103+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/54/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/54/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/54/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase09.p",
+    "durationInMillis" : 7535,
+    "id" : "54",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.112+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/55/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/55/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/55/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "test/testsPruebaA/testCase10.p",
+    "durationInMillis" : 7524,
+    "id" : "55",
+    "input" : null,
+    "result" : "SUCCESS",
+    "startTime" : "2019-02-06T18:04:38.123+0000",
+    "state" : "FINISHED",
+    "type" : "PARALLEL",
+    "causeOfBlockage" : null,
+    "edges" : [
+      {
+        "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl$EdgeImpl",
+        "id" : "86",
+        "type" : "STAGE"
+      }
+    ],
+    "firstParent" : "27",
+    "restartable" : false
+  },
+  {
+    "_class" : "io.jenkins.blueocean.rest.impl.pipeline.PipelineNodeImpl",
+    "_links" : {
+      "self" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/86/"
+      },
+      "actions" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/86/actions/"
+      },
+      "steps" : {
+        "_class" : "io.jenkins.blueocean.rest.hal.Link",
+        "href" : "/blue/rest/organizations/jenkins/pipelines/mario-prueba/pipelines/PLci-usuario2/branches/master/runs/50/nodes/86/steps/"
+      }
+    },
+    "actions" : [
+      
+    ],
+    "displayDescription" : null,
+    "displayName" : "ens_test",
+    "durationInMillis" : 286,
+    "id" : "86",
+    "input" : null,
+    "result" : "FAILURE",
+    "startTime" : "2019-02-06T18:04:45.922+0000",
+    "state" : "FINISHED",
+    "type" : "STAGE",
+    "causeOfBlockage" : null,
+    "edges" : [
+      
+    ],
+    "firstParent" : null,
+    "restartable" : true
+  }
+]

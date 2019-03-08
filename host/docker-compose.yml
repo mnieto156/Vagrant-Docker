@@ -10,6 +10,8 @@ services:
     ports:
       - "5432:5432"
 
+    restart: always
+    
     environment:
       - POSTGRES_USER=gitea
       - POSTGRES_PASSWORD=gitea
@@ -43,6 +45,8 @@ services:
       - gitea
       - jenkins
 
+    restart: always
+
   gitea:
     image: gitea/gitea:latest
 
@@ -68,7 +72,7 @@ services:
       - postgres
 
   jenkins:
-    image: jenkins/jenkins:lts-alpine
+    image: jenkins/jenkins:lts-slim
 
     container_name: jenkins
 

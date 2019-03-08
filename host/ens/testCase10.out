@@ -1,0 +1,21 @@
+ENS2001 para GNU/Linux (32 bits)
+Versi¢n 1.0 - Febrero 2003
+http://usuarios.lycos.es/ens2001
+
+Fichero de configuracion (ens2001.cfg) cargado con exito
+
+Representaci¢n en base decimal
+La pila crece en sentido descendente
+Se detendr  la ejecucion si se encuentra un punto de ruptura
+Ejecuci¢n Normal
+No se comprobar  si PC invade el espacio de pila
+No se comprobar  si SP invade el espacio de c¢digo
+Se inicializar n los registros antes de ejecutar
+
+Ensamblando fichero ens/testCase10.ens
+L¡neas procesadas: 108
+Fichero ens/testCase10.ens ensamblado correctamente
+ENS2001>CONTROL FLUJO ERROR
+x(012345):012345
+Fin del programa. Instrucci¢n HALT
+ENS2001>¨Seguro que desea salir (S/N)? 

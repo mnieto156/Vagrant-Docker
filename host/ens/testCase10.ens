@@ -1,0 +1,107 @@
+; - Intermediate code: Quadruple - [INIT_PROG trece, null, null]
+RES  5
+MOVE #65535, .SP
+MOVE .SP, .IY
+SUB  .SP, #14
+MOVE .A, .SP
+MOVE .IY, /0
+BR   /L_trece
+
+; - Intermediate code: Quadruple - [PRLABEL L_trece, null, null]
+L_trece:
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [WRSTR string2, null, null]
+WRSTR /string2
+
+; - Intermediate code: Quadruple - [WRLN null, null, null]
+WRSTR /string0
+
+; - Intermediate code: Quadruple - [MV T_0, 0, null]
+MOVE #0, #-6[.IY]
+
+; - Intermediate code: Quadruple - [ASSIGN x, T_0, null]
+; - variable global:x
+MOVE #-6[.IY], /65532
+
+; - Intermediate code: Quadruple - [WRSTR string3, null, null]
+WRSTR /string3
+
+; - Intermediate code: Quadruple - [LAB L_4, null, null]
+L_4:
+
+; - Intermediate code: Quadruple - [MVA T_1, x, null]
+; - variable global:x
+MOVE #65532, #-7[.IY]
+
+; - Intermediate code: Quadruple - [WRINT T_1, null, null]
+; - temporal referencia:T_1
+MOVE #-7[.IY], .R1
+WRINT [.R1]
+
+; - Intermediate code: Quadruple - [MVA T_2, x, null]
+; - variable global:x
+MOVE #65532, #-8[.IY]
+
+; - Intermediate code: Quadruple - [MV T_3, 1, null]
+MOVE #1, #-9[.IY]
+
+; - Intermediate code: Quadruple - [ADD T_4, T_2, T_3]
+; - temporal referencia:T_2
+MOVE #-8[.IY], .R1
+ADD  [.R1], #-9[.IY]
+MOVE .A, #-10[.IY]
+
+; - Intermediate code: Quadruple - [ASSIGN x, T_4, null]
+; - variable global:x
+MOVE #-10[.IY], /65532
+
+; - Intermediate code: Quadruple - [MV T_5, 5, null]
+MOVE #5, #-11[.IY]
+
+; - Intermediate code: Quadruple - [MVA T_6, x, null]
+; - variable global:x
+MOVE #65532, #-12[.IY]
+
+; - Intermediate code: Quadruple - [CMP T_5, T_6, null]
+; - temporal referencia:T_6
+MOVE #-12[.IY], .R2
+CMP  #-11[.IY], [.R2]
+
+; - Intermediate code: Quadruple - [BN L_2, null, null]
+BN   /L_2
+
+; - Intermediate code: Quadruple - [MV T_7, 0, null]
+MOVE #0, #-13[.IY]
+
+; - Intermediate code: Quadruple - [BR L_3, null, null]
+BR   /L_3
+
+; - Intermediate code: Quadruple - [LAB L_2, null, null]
+L_2:
+
+; - Intermediate code: Quadruple - [MV T_7, 1, null]
+MOVE #1, #-13[.IY]
+
+; - Intermediate code: Quadruple - [LAB L_3, null, null]
+L_3:
+
+; - Intermediate code: Quadruple - [BRF L_4, T_7, null]
+CMP  #1, #-13[.IY]
+BNZ  /L_4
+
+; - Intermediate code: Quadruple - [END_PROG null, null, null]
+HALT
+L_ERR_OOB:
+WRSTR /string1
+WRSTR /string0
+HALT
+
+; - Intermediate code: Quadruple - [STR_IN_MEM null, null, null]
+string0: DATA "\n"
+string1: DATA "Error->value out of bounds from set"
+string2: DATA "CONTROL FLUJO REPEAT"
+string3: DATA "x(012345):"
+

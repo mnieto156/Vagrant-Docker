@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../data/nginx", "/opt/data/nginx"
   #config.vm.synced_folder "../data/sql", "/opt/data/sql", type: "rsync"
   config.vm.synced_folder "../data/gitea/conf", "/opt/data/gitea/gitea/conf"
-  config.vm.synced_folder "../data/gitea/git", "/opt/data/gitea/git"
+  config.vm.synced_folder "../data/gitea/git/repositories", "/opt/data/gitea/git/repositories"
   config.vm.synced_folder "../data/gitea/custom", "/opt/data/gitea/gitea/custom"
 
   config.vm.provider "virtualbox" do |vb|
