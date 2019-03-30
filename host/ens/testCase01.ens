@@ -1,0 +1,29 @@
+; - Intermediate code: Quadruple - [INIT_PROG uno, null, null]
+RES  5
+MOVE #65535, .SP
+MOVE .SP, .IY
+SUB  .SP, #2
+MOVE .A, .SP
+MOVE .IY, /0
+BR   /L_uno
+
+; - Intermediate code: Quadruple - [PRLABEL L_uno, null, null]
+L_uno:
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [END_PROG null, null, null]
+HALT
+L_ERR_OOB:
+WRSTR /string1
+WRSTR /string0
+HALT
+
+; - Intermediate code: Quadruple - [STR_IN_MEM null, null, null]
+string0: DATA "\n"
+string1: DATA "Error->value out of bounds from set"
+

@@ -1,0 +1,214 @@
+; - Intermediate code: Quadruple - [INIT_PROG nueve, null, null]
+RES  5
+MOVE #65535, .SP
+MOVE .SP, .IY
+SUB  .SP, #48
+MOVE .A, .SP
+MOVE .IY, /0
+BR   /L_nueve
+
+; - Intermediate code: Quadruple - [PRLABEL L_nueve, null, null]
+L_nueve:
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [WRSTR string2, null, null]
+WRSTR /string2
+
+; - Intermediate code: Quadruple - [MV T_0, 2, null]
+MOVE #2, #-32[.IY]
+
+; - Intermediate code: Quadruple - [MV T_1, 4, null]
+MOVE #4, #-33[.IY]
+
+; - Intermediate code: Quadruple - [SET_INITIALIZE conj1, nueve, null]
+; - variable global:conj1
+MOVE #65504, .IX
+MOVE #0, #0[.IX]
+MOVE #0, #1[.IX]
+MOVE #0, #2[.IX]
+MOVE #0, #3[.IX]
+MOVE #0, #4[.IX]
+MOVE #0, #5[.IX]
+MOVE #0, #6[.IX]
+MOVE #0, #7[.IX]
+MOVE #0, #8[.IX]
+MOVE #0, #9[.IX]
+
+; - Intermediate code: Quadruple - [SET_FILL conj1, T_0, T_1]
+CMP  #1, #-32[.IY]
+BP  /L_ERR_OOB
+CMP  #10, #-33[.IY]
+BN  /L_ERR_OOB
+; - variable global:conj1
+MOVE #65504, .R0
+SUB  #-32[.IY], #1
+MOVE .A, .R3
+SUB  #-33[.IY], #1
+MOVE .A, .R4
+INC  .R4
+ADD  .R0, .R4
+MOVE .A, .R4
+ADD  .R0, .R3
+L_3:
+MOVE #1, [.A]
+INC  .A
+CMP  .A, .R4
+BNZ  /L_3
+
+; - Intermediate code: Quadruple - [MV T_2, 3, null]
+MOVE #3, #-34[.IY]
+
+; - Intermediate code: Quadruple - [MV T_3, 7, null]
+MOVE #7, #-35[.IY]
+
+; - Intermediate code: Quadruple - [SET_INITIALIZE conj2, nueve, null]
+; - variable global:conj2
+MOVE #65514, .IX
+MOVE #0, #0[.IX]
+MOVE #0, #1[.IX]
+MOVE #0, #2[.IX]
+MOVE #0, #3[.IX]
+MOVE #0, #4[.IX]
+MOVE #0, #5[.IX]
+MOVE #0, #6[.IX]
+MOVE #0, #7[.IX]
+MOVE #0, #8[.IX]
+MOVE #0, #9[.IX]
+
+; - Intermediate code: Quadruple - [SET_FILL conj2, T_2, T_3]
+CMP  #1, #-34[.IY]
+BP  /L_ERR_OOB
+CMP  #10, #-35[.IY]
+BN  /L_ERR_OOB
+; - variable global:conj2
+MOVE #65514, .R0
+SUB  #-34[.IY], #1
+MOVE .A, .R3
+SUB  #-35[.IY], #1
+MOVE .A, .R4
+INC  .R4
+ADD  .R0, .R4
+MOVE .A, .R4
+ADD  .R0, .R3
+L_4:
+MOVE #1, [.A]
+INC  .A
+CMP  .A, .R4
+BNZ  /L_4
+
+; - Intermediate code: Quadruple - [MVA T_4, conj1, null]
+; - variable global:conj1
+MOVE #65504, #-36[.IY]
+
+; - Intermediate code: Quadruple - [MVA T_5, conj2, null]
+; - variable global:conj2
+MOVE #65514, #-37[.IY]
+
+; - Intermediate code: Quadruple - [JOIN_SET T_6, T_4, T_5]
+; - temporal referencia:T_4
+MOVE #-36[.IY], .R1
+; - temporal referencia:T_5
+MOVE #-37[.IY], .R2
+SUB  .IY, #47
+MOVE .A, .R0
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+OR   [.R1], [.R2]
+MOVE .A, [.R0]
+INC  .R0
+INC  .R1
+INC  .R2
+
+; - Intermediate code: Quadruple - [ASSIGN_SET conj3, T_6, null]
+SUB  .IY, #47
+MOVE .A, .R1
+; - variable global:conj3
+MOVE #65524, .R0
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+MOVE [.R1], [.R0]
+INC  .R0
+INC  .R1
+
+; - Intermediate code: Quadruple - [END_PROG null, null, null]
+HALT
+L_ERR_OOB:
+WRSTR /string1
+WRSTR /string0
+HALT
+
+; - Intermediate code: Quadruple - [STR_IN_MEM null, null, null]
+string0: DATA "\n"
+string1: DATA "Error->value out of bounds from set"
+string2: DATA "TIPOS ESTRUCTURADOS CONJUNTOS"
+

@@ -1,0 +1,150 @@
+; - Intermediate code: Quadruple - [INIT_PROG doce, null, null]
+RES  5
+MOVE #65535, .SP
+MOVE .SP, .IY
+SUB  .SP, #9
+MOVE .A, .SP
+MOVE .IY, /0
+BR   /L_doce
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [PRLABEL L_incrementa, null, null]
+L_incrementa:
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [MVA T_0, x, null]
+; - parametro:x
+MOVE #1[.IY], #-3[.IY]
+
+; - Intermediate code: Quadruple - [MV T_1, 1, null]
+MOVE #1, #-4[.IY]
+
+; - Intermediate code: Quadruple - [ADD T_2, T_0, T_1]
+; - temporal referencia:T_0
+MOVE #-3[.IY], .R1
+ADD  [.R1], #-4[.IY]
+MOVE .A, #-5[.IY]
+
+; - Intermediate code: Quadruple - [ASSIGN x, T_2, null]
+; - parametro:x
+MOVE #1[.IY], .R0
+MOVE #-5[.IY], [.R0]
+
+; - Intermediate code: Quadruple - [MVA T_3, x, null]
+; - parametro:x
+MOVE #1[.IY], #-6[.IY]
+
+; - Intermediate code: Quadruple - [ASSIGN y, T_3, null]
+; - temporal referencia:
+MOVE #-6[.IY], .R1
+; - variable local:y
+MOVE [.R1], #-2[.IY]
+
+; - Intermediate code: Quadruple - [MVA T_4, y, null]
+; - variable local:y
+SUB  .IY, #2
+MOVE .A, #-7[.IY]
+
+; - Intermediate code: Quadruple - [FUNCTION_RETURN T_4, null, null]
+; - temporal referencia:
+MOVE #-7[.IY], .R1
+MOVE [.IY], .R0
+DEC  .R0
+MOVE [.R1], [.R0]
+RET 
+
+; - Intermediate code: Quadruple - [PRLABEL L_doce, null, null]
+L_doce:
+
+; - Intermediate code: Quadruple - [NOP null, null, null]
+NOP
+
+; - Intermediate code: Quadruple - [WRSTR string2, null, null]
+WRSTR /string2
+
+; - Intermediate code: Quadruple - [WRLN null, null, null]
+WRSTR /string0
+
+; - Intermediate code: Quadruple - [MV T_0, 1, null]
+MOVE #1, #-4[.IY]
+
+; - Intermediate code: Quadruple - [ASSIGN z, T_0, null]
+; - variable global:z
+MOVE #-4[.IY], /65532
+
+; - Intermediate code: Quadruple - [MVA T_2, z, null]
+; - variable global:z
+MOVE #65532, #-6[.IY]
+
+; - Intermediate code: Quadruple - [PARAM T_2, null, null]
+PUSH #-6[.IY]
+
+; - Intermediate code: Quadruple - [CALL T_1, incrementa, null]
+; - llamada a funcion:incrementa
+; - creacion del RA:  incrementa Nivel:1
+MOVE .SP, /1
+PUSH .IY
+MOVE .SP, .IY
+INC  .IY
+SUB  .SP, #8
+MOVE .A, .SP
+; - RA creado
+CALL /L_incrementa
+; - retorno al RA origen. Destruccion del RA
+MOVE [.IY], /0
+MOVE .IY, .SP
+ADD  .SP, #1
+MOVE .A, .SP
+MOVE [.IY], .IY
+; - mover el retorno de funcion al temporal
+SUB  .IY, #5
+MOVE .A, .R0
+SUB  .IY, #1
+MOVE [.A], [.R0]
+
+; - Intermediate code: Quadruple - [ASSIGN v, T_1, null]
+; - variable global:v
+MOVE #-5[.IY], /65533
+
+; - Intermediate code: Quadruple - [WRSTR string3, null, null]
+WRSTR /string3
+
+; - Intermediate code: Quadruple - [MVA T_3, v, null]
+; - variable global:v
+MOVE #65533, #-7[.IY]
+
+; - Intermediate code: Quadruple - [WRINT T_3, null, null]
+; - temporal referencia:T_3
+MOVE #-7[.IY], .R1
+WRINT [.R1]
+
+; - Intermediate code: Quadruple - [WRSTR string4, null, null]
+WRSTR /string4
+
+; - Intermediate code: Quadruple - [MVA T_4, z, null]
+; - variable global:z
+MOVE #65532, #-8[.IY]
+
+; - Intermediate code: Quadruple - [WRINT T_4, null, null]
+; - temporal referencia:T_4
+MOVE #-8[.IY], .R1
+WRINT [.R1]
+
+; - Intermediate code: Quadruple - [END_PROG null, null, null]
+HALT
+L_ERR_OOB:
+WRSTR /string1
+WRSTR /string0
+HALT
+
+; - Intermediate code: Quadruple - [STR_IN_MEM null, null, null]
+string0: DATA "\n"
+string1: DATA "Error->value out of bounds from set"
+string2: DATA "SUBPROGRAMAS FUNCIONES"
+string3: DATA "v(2):"
+string4: DATA "z(2):"
+

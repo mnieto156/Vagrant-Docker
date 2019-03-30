@@ -12,11 +12,10 @@ No se comprobar  si PC invade el espacio de pila
 No se comprobar  si SP invade el espacio de c¢digo
 Se inicializar n los registros antes de ejecutar
 
-Ensamblando fichero ens/fact.ens
-L¡neas procesadas: 87
-Fichero ens/fact.ens ensamblado correctamente
-ENS2001>
-Un numero: 
-El factorial es 6
+Ensamblando fichero ens/testCase09.ens
+L¡neas procesadas: 151
+Fichero ens/testCase09.ens ensamblado correctamente
+ENS2001>SUBPROGRAMAS FUNCIONES
+v(2):2z(2):2
 Fin del programa. Instrucci¢n HALT
 ENS2001>¨Seguro que desea salir (S/N)? 
