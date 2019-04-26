@@ -72,7 +72,7 @@ services:
       - postgres
 
   jenkins:
-    image: jenkins/jenkins:lts-slim
+    build: .
 
     container_name: jenkins
 
