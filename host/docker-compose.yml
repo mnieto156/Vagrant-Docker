@@ -72,7 +72,9 @@ services:
       - postgres
 
   jenkins:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.jenkins
 
     container_name: jenkins
 
@@ -92,6 +94,26 @@ services:
 
     depends_on:
       - gitea
+
+  plweb:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+
+    container_name: plweb
+
+    environment:
+      - DATASOURCE_URL=postgres/ProcLen_Test
+      - GITEA_BASE_URL=http://gitea:3000
+      - ROOT_PATH=/
+
+    ports:
+      - "9999"
+
+    networks:
+      - internal
+
+
 
 volumes:
   jenkins_data:

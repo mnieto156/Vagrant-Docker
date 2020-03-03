@@ -1,3 +1,5 @@
 .vagrant
 *.log
 data/gitea/git/repositories/
+
+host/PLci_SB-0.0.1-SNAPSHOT.jar
