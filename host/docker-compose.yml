@@ -78,9 +78,6 @@ services:
 
     container_name: jenkins
 
-    environment:
-      - JENKINS_OPTS="--prefix=/jenkins"
-
     ports:
       - "50000"
 
